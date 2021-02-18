@@ -1,7 +1,7 @@
 public ArrayList <Ripple> drops = new ArrayList<Ripple>();
 public int rockH;
 public int rockW;
-
+public int buffer = 3;
 public void setup()
 {
   size(400, 400);
@@ -9,7 +9,12 @@ public void setup()
 }
 public void draw()
 {
-  background(240, 248, 255);
+  if(buffer % 3 == 0) {
+    background(240, 248, 255);
+    buffer++;
+  } else {
+    buffer++;
+  }
   for(int i = 0; i < drops.size(); i++) {
     drops.get(i).show();
     drops.get(i).rippleEffect();
