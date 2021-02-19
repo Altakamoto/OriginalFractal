@@ -19,6 +19,7 @@ public void draw()
     drops.get(i).show();
     drops.get(i).rippleEffect();
   }
+  fill(211, 211, 211);
   ellipse(mouseX, mouseY, rockH, rockW);
 }
 
